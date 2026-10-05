@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite the associated article."
+title: "DBMR Roundabout Reliability: Reproducibility Package"
+type: software
+authors:
+  - family-names: "Eriskin"
+    given-names: "Ekinhan"
+  - family-names: "Terzi"
+    given-names: "Serdal"
+  - family-names: "Ceylan"
+    given-names: "Halim"
+version: "1.0.0"
+date-released: "2026-10-05"
+repository-code: "TO_BE_ADDED_AFTER_GITHUB_PUBLICATION"
+preferred-citation:
+  type: article
+  title: "Congestion-Induced Behavioral Escalation and Dynamic Reliability at Oversaturated Roundabouts"
+  authors:
+    - family-names: "Eriskin"
+      given-names: "Ekinhan"
+    - family-names: "Terzi"
+      given-names: "Serdal"
+    - family-names: "Ceylan"
+      given-names: "Halim"
