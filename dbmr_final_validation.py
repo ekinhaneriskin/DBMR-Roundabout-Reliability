@@ -67,15 +67,6 @@ LOCKED_FREEFLOW_S = {
 
 EXPECTED_SUMO_VERSION_TOKEN = "1.27.1"
 
-RESEARCH_QUESTION = (
-    "All vehicles enter at L0. Under experienced congestion, susceptible drivers "
-    "may progressively adapt L0->L1->L2->L3->L4. The study asks whether these "
-    "congestion-induced adaptive/aggressive behaviors help the drivers who express "
-    "them (waiting time, travel time, completion), to what degree, and what "
-    "system-level reliability/stability/safety consequences accompany them."
-)
-
-
 # =============================================================================
 # GENERAL HELPERS
 # =============================================================================
