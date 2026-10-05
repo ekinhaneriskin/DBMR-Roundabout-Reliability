@@ -1,0 +1,57 @@
+{
+  "status": "CORE_15600_CAMPAIGN_COMPLETE",
+  "campaign_pass": true,
+  "checks": {
+    "task_report_n_100": true,
+    "all_task_reports_pass": true,
+    "run_n_15600": true,
+    "all_error_empty": true,
+    "mechanical_rows_pass": true,
+    "crn_assignment_integrity_pass": true,
+    "system_paired_row_n_14400": true,
+    "private_benefit_row_n_57600": true,
+    "private_groups_exact": true,
+    "scenario_n_6": true,
+    "seed_n_100": true
+  },
+  "mechanical_detail": {
+    "run_n": 15600,
+    "all_error_empty": true,
+    "all_architecture_pass": true,
+    "departure_not_l0_n_present": true,
+    "departure_not_l0_n_zero": true,
+    "level_jump_violation_n_present": true,
+    "level_jump_violation_n_zero": true,
+    "noneligible_transition_n_present": true,
+    "noneligible_transition_n_zero": true,
+    "type_mismatch_n_present": true,
+    "type_mismatch_n_zero": true,
+    "pushy_runtime_update_errors_present": true,
+    "pushy_runtime_update_errors_zero": true,
+    "pushy_highspeed_nonzero_samples_present": true,
+    "pushy_highspeed_nonzero_samples_zero": true,
+    "pushy_fast_neighbor_nonzero_samples_present": true,
+    "pushy_fast_neighbor_nonzero_samples_zero": true,
+    "pushy_no_neighbor_nonzero_samples_present": true,
+    "pushy_no_neighbor_nonzero_samples_zero": true,
+    "safety_query_errors_present": true,
+    "safety_query_errors_zero": true,
+    "pass": true
+  },
+  "hashes": {
+    "matrix_sha256": "47d076d9019ac036298243b5b4683b7b7379482ea44f23812a0d3d4bfe816ca1",
+    "config_manifest_sha256": "91a90c0e74ddfddb7f6929c18a268500f653f12018591c90d2662de61950bfa6",
+    "network_manifest_sha256": "256c58e58aef504909f64f5c60ad8b91e1a1684070abf0e93cd0168355d21189",
+    "validation_sha256": "d902014773a09a42c5d33cef9a8fe4e419c89a21ecf04bda4fca7bad8e16d009",
+    "model_sha256": "2b643c2f2e47e3fa6f7ca11a118e00c9167086addfb15843adb8d2016c6a626b",
+    "spec_sha256": "4b6aa902cfb90409e70031b0a62210cc5dfba9c5da81b1f6f22851d8e14cdcb7"
+  },
+  "files": {
+    "run_level_results": "outputs/DBMR_FINAL_CAMPAIGN_V2_100x6/reports/CORE_RUN_LEVEL_RESULTS_100x6.csv",
+    "system_paired_effects": "outputs/DBMR_FINAL_CAMPAIGN_V2_100x6/reports/SYSTEM_PAIRED_EFFECTS_100x6.csv",
+    "private_benefit_paired": "outputs/DBMR_FINAL_CAMPAIGN_V2_100x6/reports/PRIVATE_BENEFIT_PAIRED_100x6.csv",
+    "crn_audit": "outputs/DBMR_FINAL_CAMPAIGN_V2_100x6/reports/CRN_ASSIGNMENT_AUDIT_100x6.csv"
+  },
+  "private_benefit_sign": "delta_TT_adv_s = TT_control - TT_dynamic; positive = dynamic/adaptive run individually advantageous in travel-time terms",
+  "interpretation_guardrail": "Absolute L2/L4 braking and jerk remain model-form sensitive. Collision/teleport counts are simulation robustness indicators, not real-world crash probabilities."
+}

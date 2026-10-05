@@ -1,0 +1,213 @@
+{
+  "spec_name": "DBMR_FINAL_SPEC_V1",
+  "sumo_version": "Eclipse SUMO sumo 1.27.1",
+  "step_s": 0.2,
+  "poll_s": 1.0,
+  "primary_lateral_resolution_m": 0.05,
+  "demand_injection_end_s": 3600,
+  "simulation_end_s": 4200,
+  "pressure_model": {
+    "speed_deficit": "1-speed/allowed_speed",
+    "wait_share": "accumulated_wait/elapsed",
+    "delay_share": "excess/(excess+freeflow)",
+    "local_halt": "halting_vehicles/vehicles_on_edge",
+    "memory_burden": "1-(1-wait_share)*(1-delay_share)",
+    "local_context": "1-(1-speed_deficit)*(1-local_halt)",
+    "P": "memory_burden*local_context",
+    "q_up": "1-exp(-(P/T_up)*dt)"
+  },
+  "susceptibility": {
+    "meaning_of_p": "probability/fraction susceptible to escalation, not assertive at entry",
+    "p_values": [
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "all_vehicles_start_L0": true
+  },
+  "T_up_sensitivity_s": [
+    15.0,
+    30.0,
+    60.0
+  ],
+  "contextual_lcPushy": {
+    "speed_cutoff_kmh": 10.0,
+    "neighbor_radius_m": 10.0,
+    "rule": "level amplitude active only if ego<10 km/h, >=1 neighbor within 10 m, and every neighbor in radius <10 km/h; else 0",
+    "amplitude_by_level": {
+      "0": 0.0,
+      "1": 0.04,
+      "2": 0.08,
+      "3": 0.135111973435,
+      "4": 0.1902239468693733
+    }
+  },
+  "locked_freeflow_s": {
+    "right": 30.6,
+    "straight": 40.8,
+    "left": 51.0
+  },
+  "collapse_detector": {
+    "start_after_s": 60.0,
+    "movement_speed_threshold_mps": 0.3,
+    "no_movement_duration_s": 30.0,
+    "no_arrival_duration_s": 300.0,
+    "approach_halted_count_threshold": 6,
+    "logic": "active vehicles > 0 AND halted approach count > 6 AND (no movement > 30 s OR no arrival > 300 s)"
+  },
+  "geometries": {
+    "S1": {
+      "N": 1,
+      "E": 1,
+      "S": 1,
+      "W": 1
+    },
+    "S4": {
+      "N": 2,
+      "E": 1,
+      "S": 1,
+      "W": 1
+    },
+    "S5": {
+      "N": 2,
+      "E": 2,
+      "S": 1,
+      "W": 1
+    },
+    "S2": {
+      "N": 2,
+      "E": 1,
+      "S": 2,
+      "W": 1
+    },
+    "S6": {
+      "N": 2,
+      "E": 2,
+      "S": 2,
+      "W": 1
+    },
+    "S3": {
+      "N": 2,
+      "E": 2,
+      "S": 2,
+      "W": 2
+    }
+  },
+  "core_demands_vph": [
+    3000,
+    3200
+  ],
+  "levels": {
+    "0": {
+      "tau": 2.1,
+      "minGap": 3.0,
+      "accel": 2.6,
+      "decel": 4.5,
+      "apparentDecel": 4.5,
+      "emergencyDecel": 9.0,
+      "sigma": 0.2,
+      "speedFactor": 0.69528,
+      "speedDev": 0.04,
+      "minGapLat": 0.85,
+      "maxSpeedLat": 0.65,
+      "lcSpeedGain": 0.6,
+      "lcKeepRight": 1.0,
+      "lcSublane": 0.75,
+      "lcAssertive": 0.75,
+      "lcImpatience": 0.0,
+      "lcSigma": 0.06,
+      "actionStepLength": 0.2,
+      "latAlignment": "center",
+      "lcPushy": 0.0
+    },
+    "1": {
+      "tau": 1.5498647034633906,
+      "minGap": 2.5,
+      "accel": 2.6,
+      "decel": 4.386022790567949,
+      "apparentDecel": 4.386022790567949,
+      "emergencyDecel": 8.772045581135899,
+      "sigma": 0.325,
+      "speedFactor": 0.716195,
+      "speedDev": 0.0288246709387749,
+      "minGapLat": 0.8064721842221916,
+      "maxSpeedLat": 0.8,
+      "lcSpeedGain": 0.3230961380378342,
+      "lcKeepRight": 0.5493375848475843,
+      "lcSublane": 0.7454996707197279,
+      "lcAssertive": 0.925,
+      "lcImpatience": 0.07,
+      "lcSigma": 0.0849999999999999,
+      "actionStepLength": 0.2,
+      "latAlignment": "center",
+      "lcPushy": 0.04
+    },
+    "2": {
+      "tau": 0.9997294069267808,
+      "minGap": 2.0,
+      "accel": 2.6,
+      "decel": 4.272045581135899,
+      "apparentDecel": 4.272045581135899,
+      "emergencyDecel": 8.544091162271798,
+      "sigma": 0.45,
+      "speedFactor": 0.73711,
+      "speedDev": 0.0176493418775498,
+      "minGapLat": 0.7629443684443833,
+      "maxSpeedLat": 0.95,
+      "lcSpeedGain": 0.0461922760756686,
+      "lcKeepRight": 0.0986751696951687,
+      "lcSublane": 0.7409993414394558,
+      "lcAssertive": 1.1,
+      "lcImpatience": 0.14,
+      "lcSigma": 0.11,
+      "actionStepLength": 0.2,
+      "latAlignment": "nice",
+      "lcPushy": 0.08
+    },
+    "3": {
+      "tau": 0.6701350571936927,
+      "minGap": 1.75,
+      "accel": 2.6,
+      "decel": 4.451954044122249,
+      "apparentDecel": 4.451954044122249,
+      "emergencyDecel": 8.903908088244497,
+      "sigma": 0.585,
+      "speedFactor": 0.758025,
+      "speedDev": 0.0434836940839886,
+      "minGapLat": 0.6314721842221916,
+      "maxSpeedLat": 1.2,
+      "lcSpeedGain": 0.026429957414139,
+      "lcKeepRight": 0.0534069789971689,
+      "lcSublane": 0.8704996707197279,
+      "lcAssertive": 1.4500000000000002,
+      "lcImpatience": 0.295,
+      "lcSigma": 0.145,
+      "actionStepLength": 0.2,
+      "latAlignment": "nice",
+      "lcPushy": 0.135111973435
+    },
+    "4": {
+      "tau": 0.3405407074606046,
+      "minGap": 1.5,
+      "accel": 2.6,
+      "decel": 4.631862507108599,
+      "apparentDecel": 4.631862507108599,
+      "emergencyDecel": 9.263725014217195,
+      "sigma": 0.72,
+      "speedFactor": 0.77894,
+      "speedDev": 0.0693180462904274,
+      "minGapLat": 0.5,
+      "maxSpeedLat": 1.45,
+      "lcSpeedGain": 0.0066676387526094,
+      "lcKeepRight": 0.0081387882991693,
+      "lcSublane": 1.0,
+      "lcAssertive": 1.8,
+      "lcImpatience": 0.45,
+      "lcSigma": 0.18,
+      "actionStepLength": 0.2,
+      "latAlignment": "arbitrary",
+      "lcPushy": 0.1902239468693733
+    }
+  }
+}
