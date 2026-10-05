@@ -151,12 +151,12 @@ Run `python repo_integrity_check.py` for a lightweight repository-level verifica
 
 ## Data and code availability statement
 
-A manuscript-ready statement is provided in `docs/DATA_AND_CODE_AVAILABILITY.md`. Replace the repository placeholder with the public GitHub URL after publication.
+A manuscript-ready statement is provided in `docs/DATA_AND_CODE_AVAILABILITY.md`.
 
 ## Citation
 
-A machine-readable citation is provided in `CITATION.cff`. The journal DOI can be added after publication.
+A machine-readable citation is provided in `CITATION.cff`
 
 ## License
 
-A public reuse license has **not yet been applied**. The authors should select the code and data licenses before the repository is made public. The proposed option is MIT for source code and CC BY 4.0 for derived data/validation artifacts.
+MIT for source code and CC BY 4.0 for derived data/validation artifacts.
