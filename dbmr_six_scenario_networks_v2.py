@@ -1,14 +1,4 @@
 #!/usr/bin/env python3
-"""
-DBMR six-scenario network family V2.
-
-Extends ONLY the exit-lane geometry family. The validated roundabout geometry,
-approaches, circulating roadway, speeds, priorities and connections are kept
-identical to dbmr_final_validation.build_network().
-
-Behavioral ladder remains frozen L0-L4.
-"""
-
 from __future__ import annotations
 
 import hashlib
