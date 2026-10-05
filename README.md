@@ -85,6 +85,15 @@ bash submit_dbmr_truba_pipeline.sh
 
 The dependency chain performs configuration/network audit, preflight, production array execution, and final aggregation. See `docs/TRUBA_EXECUTION.md`.
 
+
+## License
+
+Source code and scripts in this repository are licensed under the **MIT License**. See `LICENSE`.
+
+Repository-produced aggregated results and derived validation data are licensed under the **Creative Commons Attribution 4.0 International (CC BY 4.0) License**. See `DATA_LICENSE.md`.
+
+Raw openDD data are not redistributed in this repository and remain subject to the terms of the original openDD source.
+
 ## Citation
 
 Citation metadata are provided in `CITATION.cff`.
