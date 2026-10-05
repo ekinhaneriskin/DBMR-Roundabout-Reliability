@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+
+.venv/
+venv/
+
+truba_logs/
+
+outputs/DBMR_FINAL_CAMPAIGN_V2_100x6/summaries/
+outputs/DBMR_FINAL_CAMPAIGN_V2_100x6/vehicles/
+outputs/DBMR_FINAL_CAMPAIGN_V2_100x6/timeseries/
+outputs/DBMR_FINAL_CAMPAIGN_V2_100x6/scratch/
